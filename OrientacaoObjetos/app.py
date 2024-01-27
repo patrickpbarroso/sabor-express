@@ -1,15 +1,17 @@
 from modelos.restaurante import Restaurante
+from modelos.cardapio.prato import Prato
+from modelos.cardapio.bebida import Bebida
 
 mandalla = Restaurante('Mandalla Foods', 'Fast Food')
-
-mandalla.alternar_estado()
-
-mandalla.receber_avaliacao('André', 5)
-mandalla.receber_avaliacao('Patrick', 3)
-mandalla.receber_avaliacao('Mary', 4)
+bebida = Bebida('Suco de Melancia', 5.0, 'Grande')
+prato = Prato('Paozinho', 2.00, 'O melhor pão da cidade')
+mandalla.adicionar_no_cardapio(bebida)
+mandalla.adicionar_no_cardapio(prato)
+bebida.aplicar_desconto()
+prato.aplicar_desconto()
 
 def main():
-    Restaurante.listar_restaurantes()
+    mandalla.exibir_cardapio
 
 if __name__ == '__main__':
     main()
