@@ -38,7 +38,7 @@ def voltar_ao_menu_principal():
 
 def exibir_subtitulo(subtitulo):
     ''' Exibe o subtítulo seção do problema '''
-    os.system('clear')
+    # os.system('clear')
     linha = '*' * len(subtitulo)
     print(linha + '\n' + subtitulo + '\n' + linha)
     print()
@@ -108,7 +108,7 @@ def escolher_opcao():
 
 def main():
     ''' Método principal do sistema, onde a execução é iniciada '''
-    os.system('clear')
+    # os.system('clear')
     exibir_nome_do_programa()
     exibir_opcoes()
     escolher_opcao()
