@@ -33,17 +33,6 @@ class Restaurante:
         return '✅' if self._ativo else '❌'
     
     @property
-    def media_avaliacoes(self):
-        """ Calcula e retorna a média de avaliações de um restaurante"""
-        if not self._avaliacoes:
-            return '-'
-        soma_das_notas = sum(avaliacao._nota for avaliacao in self._avaliacoes)
-        quantidade_de_avaliacoes = len(self._avaliacoes)
-        media = round(soma_das_notas/quantidade_de_avaliacoes, 1)
-
-        return media
-    
-    @property
     def exibir_cardapio(self):
         print(f'\nCardapio do restaurante {self._nome}\n')
         
@@ -94,20 +83,6 @@ class Restaurante:
     def alternar_estado(self):
         """ Altera estado de um restaurando de ativo para desativado ou vice-versa """
         self._ativo = not self._ativo
-    
-    # def receber_avaliacao(self, cliente, nota):
-    #     """ 
-    #     Recebe avaliação de um restaurante por um cliente
-        
-    #     Entrada:
-    #     - cliente (str): cliente que está realizando a avaliação
-    #     - nota (float): nota atribuída ao restaurante na avaliação
-    #     """
-    #     if nota < 0 or nota > 5:
-    #         print(f'Avaliação inválida do cliente {cliente} inválida')
-    #     else:
-    #         avaliacao = Avaliacao(cliente, nota)
-    #         self._avaliacoes.append(avaliacao)
     
     def adicionar_no_cardapio(self, item):
         if isinstance(item, ItemCardapio):
