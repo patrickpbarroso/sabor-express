@@ -95,19 +95,19 @@ class Restaurante:
         """ Altera estado de um restaurando de ativo para desativado ou vice-versa """
         self._ativo = not self._ativo
     
-    def receber_avaliacao(self, cliente, nota):
-        """ 
-        Recebe avaliação de um restaurante por um cliente
+    # def receber_avaliacao(self, cliente, nota):
+    #     """ 
+    #     Recebe avaliação de um restaurante por um cliente
         
-        Entrada:
-        - cliente (str): cliente que está realizando a avaliação
-        - nota (float): nota atribuída ao restaurante na avaliação
-        """
-        if nota < 0 or nota > 5:
-            print(f'Avaliação inválida do cliente {cliente} inválida')
-        else:
-            avaliacao = Avaliacao(cliente, nota)
-            self._avaliacoes.append(avaliacao)
+    #     Entrada:
+    #     - cliente (str): cliente que está realizando a avaliação
+    #     - nota (float): nota atribuída ao restaurante na avaliação
+    #     """
+    #     if nota < 0 or nota > 5:
+    #         print(f'Avaliação inválida do cliente {cliente} inválida')
+    #     else:
+    #         avaliacao = Avaliacao(cliente, nota)
+    #         self._avaliacoes.append(avaliacao)
     
     def adicionar_no_cardapio(self, item):
         if isinstance(item, ItemCardapio):
